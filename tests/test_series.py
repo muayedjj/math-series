@@ -1,14 +1,11 @@
+"""
+The following three sets of test functions will test the functionality of the three functions
+0000, 0000, 0000 defined in the 'series.py' file found in the 'math_series' folder of this project.
+"""
 from math_series import series
-# Nth integer of the Fibonacci sequence
-"""
-A function that, given an integer as an argument, returns 
-the Fibonacci number that's at the position corresponding to that 
-integer in The Fibonacci Sequence, in which each number is 
-the sum of the two preceding ones, and the first two numbers
-are 0 and 1; corresponding to the positions 0 and 1 respectively
-"""
 
 
+# Fibonacci tests
 def test_fibo():
     actual = series.fibonacci(10)
     expected = 55
@@ -27,16 +24,7 @@ def test_fibo_not_int():
     assert (actual == expected)
 
 
-# Lucas
-"""
-A function that, given an integer as an argument, returns 
-the lucas number that's at the position corresponding to that 
-integer in The Lucas Sequence, in which each number is 
-the sum of the two preceding ones, and the first two numbers
-are 2 and 1; corresponding to the positions 0 and 1 respectively.
-"""
-
-
+# Lucas tests
 def test_lucas_one():
     actual = series.lucas(1)
     expected = 1
@@ -61,15 +49,7 @@ def test_lucas_not_int():
     assert (actual == expected)
 
 
-# Sum Function
-"""A function called sum_series with one required parameter and two optional parameters. The required parameter will 
-determine which element in the series to print. The two optional parameters will have default values of 0 and 1 and will 
-determine the first two values for the series to be produced.
-Calling this function with no optional parameters will produce numbers from the fibonacci series. Calling it with the 
-optional arguments 2 and 1 will produce values from the lucas numbers. Other values for the optional parameters will 
-produce other series. Again, you may use recursion or iteration, or both.
-"""
-
+# Sum Function tests
 def test_sum_zero():
     actual = series.sum_series(0, 2, 3)
     expected = 2
